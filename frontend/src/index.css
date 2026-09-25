@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+/* ===== Tema GamesShop (Tailwind CSS v4 - tokens via @theme) ===== */
+@theme {
+  --font-display: "Bungee", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #dbe4ff;
+  --color-brand-300: #8ba3f7;
+  --color-brand-500: #3055b9;
+  --color-brand-600: #182c61;
+  --color-brand-700: #12214a;
+  --color-brand-800: #0c1733;
+  --color-brand-900: #070d1f;
+
+  --color-neon-400: #a78bfa;
+  --color-neon-500: #8b5cf6;
+  --color-neon-600: #7c3aed;
+  --color-pink-neon: #f472b6;
+  --color-green-neon: #34d399;
+
+  --animate-float: float 4s ease-in-out infinite;
+  --animate-glow: glow 2.2s ease-in-out infinite alternate;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 6px rgba(139, 92, 246, 0.45), 0 0 18px rgba(139, 92, 246, 0.25); }
+    to { box-shadow: 0 0 14px rgba(139, 92, 246, 0.8), 0 0 36px rgba(139, 92, 246, 0.45); }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-brand-900);
+  color: #e5e7eb;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Scrollbar gamer */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-brand-800); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon-600);
+  border-radius: 8px;
+}
